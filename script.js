@@ -35,3 +35,4 @@ function generateHex2() {
         color2.value=randomHex2;
     }
 b2.addEventListener("click", generateHex2);
+// for code review
