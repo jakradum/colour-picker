@@ -11,3 +11,27 @@ color2.addEventListener("input",function() {
     h32.innerHTML=color2.value;
     body.style.background="linear-gradient("+color1.value+", "+color2.value+")";
 })
+var b1=document.getElementById("b1");
+var b2=document.getElementById("b2");
+function generateHex1() {
+    var numbers="0123456789ABCDEF";
+    let hash='#';
+    for(let i=0;i<6;i++){
+        var randomHex1= hash+=numbers[ Math.floor( Math.random()*16)];
+        }
+        body.style.background="linear-gradient("+randomHex1+", "+color2.value+")";
+        h31.innerHTML=randomHex1;
+        color1.value=randomHex1;
+    }
+b1.addEventListener("click", generateHex1);
+function generateHex2() {
+    var numbers="0123456789ABCDEF";
+    let hash='#';
+    for(let i=0;i<6;i++){
+        var randomHex2= hash+=numbers[ Math.floor( Math.random()*16)];
+        }
+        body.style.background="linear-gradient("+color1.value+", "+randomHex2+")";
+        h32.innerHTML=randomHex2;
+        color2.value=randomHex2;
+    }
+b2.addEventListener("click", generateHex2);
